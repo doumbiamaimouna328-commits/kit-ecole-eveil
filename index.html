@@ -15,7 +15,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/marque-e3965e0dfe.svg">
 <link rel="preload" as="image" type="image/webp" media="(max-width: 900px)" imagesrcset="assets/banniere-486-6d73ca6d45.webp 486w, assets/banniere-810-bf3fb27ba8.webp 810w, assets/banniere-1134-7739b0337d.webp 1134w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" as="image" media="(min-width: 901px)" href="assets/banniere-kit-722e0686dc.jpg" fetchpriority="high">
-<link rel="stylesheet" href="assets/page-a27057fab0.css">
+<link rel="stylesheet" href="assets/page-62cc26b7d3.css">
 <style>
 #nl-badge-frame, #nl-hud-frame, iframe[title*="Netlify"], iframe[title*="powered by netlify" i] {
   display: none !important;
@@ -25,34 +25,6 @@
   width: 0 !important;
   height: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
-}
-/* Affichage du minuteur sur mobile et desktop sans masquage */
-#urgence .urg-in {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-  gap: 4px 10px !important;
-}
-#urgence .urg-cd {
-  display: inline-flex !important;
-  align-items: center !important;
-  white-space: nowrap !important;
-  font-weight: 700 !important;
-}
-#urgence .urg-cd[hidden] {
-  display: none !important;
-}
-@media (max-width: 699px) {
-  #urgence .urg-cd {
-    display: inline-flex !important;
-  }
-}
-@media (max-width: 375px) {
-  #urgence .urg-cd {
-    display: inline-flex !important;
-  }
 }
 </style>
 <script>
@@ -81,7 +53,7 @@
 <div id="nl-hud-frame" style="display:none!important"></div>
 <a class="kit-saut" href="#contenu-principal">Aller au contenu principal</a>
 
-<div id="urgence" class="on" role="region" aria-label="Offre du kit"><div class="urg-in"><span class="urg-b" data-promo>−<span data-remise>80</span> %</span><span><b>Offre spéciale</b> : le kit complet à <b data-prix>5 000 FCFA</b> <s data-prix-normal data-promo>25 000 FCFA</s></span><span class="urg-cd" hidden><b class="cd-text">--</b></span></div></div>
+<div id="urgence" class="on" role="region" aria-label="Offre du kit"><div class="urg-in"><span class="urg-b" data-promo>−<span data-remise>80</span> %</span><span><b>Offre spéciale</b> : le kit complet à <b data-prix>5 000 FCFA</b> <s data-prix-normal data-promo>25 000 FCFA</s></span><span class="urg-cd" hidden role="timer" aria-live="off" aria-label="Temps restant pour l’offre">Temps restant&nbsp;: <b class="cd-text">--</b></span></div></div>
 
 <main id="contenu-principal" tabindex="-1">
 
@@ -383,41 +355,9 @@
   </div>
 </section>
 
-<section class="alt">
-  <div class="wrap bene">
-    <div>
-      <h2 class="h2"><span class="mk">Chaque soir</span>, vous avancez d'un pas de plus.</h2>
-      <ul>
-        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.6.5 1.1 1.2 1.1 2.2h5c0-1 .5-1.7 1.1-2.2A6 6 0 0012 3z"/></svg><span>Retrouver des soirées de devoirs plus calmes, pas à pas.</span></li>
-        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.6.5 1.1 1.2 1.1 2.2h5c0-1 .5-1.7 1.1-2.2A6 6 0 0012 3z"/></svg><span>Désamorcer les crises sans crier.</span></li>
-        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.6.5 1.1 1.2 1.1 2.2h5c0-1 .5-1.7 1.1-2.2A6 6 0 0012 3z"/></svg><span>Aider votre enfant sans faire à sa place.</span></li>
-        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.6.5 1.1 1.2 1.1 2.2h5c0-1 .5-1.7 1.1-2.2A6 6 0 0012 3z"/></svg><span>Installer une routine qui devient une habitude.</span></li>
-        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.6.5 1.1 1.2 1.1 2.2h5c0-1 .5-1.7 1.1-2.2A6 6 0 0012 3z"/></svg><span>L'aider à se concentrer et à mieux retenir ses leçons.</span></li>
-        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.6.5 1.1 1.2 1.1 2.2h5c0-1 .5-1.7 1.1-2.2A6 6 0 0012 3z"/></svg><span>Transformer le week-end en jeux qui font réfléchir.</span></li>
-        <li><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-3.6 10.8c.6.5 1.1 1.2 1.1 2.2h5c0-1 .5-1.7 1.1-2.2A6 6 0 0012 3z"/></svg><span>Suivre ses progrès et fêter chaque effort.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="benefices-table">
-  <div class="wrap">
-    <h2 class="h2">Ce que contient le kit, et <span class="mk">ce que ça change pour vous</span></h2>
-    <p class="sub">Chaque élément du kit a une raison d'être : voici ce qu'il vous apporte concrètement.</p>
-    <div class="cb" role="table" aria-label="Outils du kit et bénéfices" aria-colcount="2">
-      <div class="r h" role="row"><span role="columnheader">Dans le kit</span><span role="columnheader">Ce que ça vous apporte</span></div>
-      <div class="r" role="row"><span role="rowheader">Routine en 5 étapes</span><span role="cell">Votre enfant sait ce qui vient ensuite : moins de négociation chaque soir.</span></div>
-      <div class="r" role="row"><span role="rowheader">10 phrases « au lieu de… dites plutôt… »</span><span role="cell">Vous savez quoi dire quand la tension monte.</span></div>
-      <div class="r" role="row"><span role="rowheader">8 plans B</span><span role="cell">Une réponse prête quand l'enfant refuse, pleure ou ne comprend pas.</span></div>
-      <div class="r" role="row"><span role="rowheader">Jeux de 10 à 20 minutes</span><span role="cell">Faciles à intégrer dans la journée, même avec peu de temps.</span></div>
-      <div class="r" role="row"><span role="rowheader">Programme de 30 jours</span><span role="cell">Un cadre pour avancer progressivement, jour après jour.</span></div>
-    </div>
-  </div>
-</section>
-
 <section class="alt" id="desirs-concrets">
   <div class="wrap">
-    <h2 class="h2">Ce que vous cherchez, <span class="mk">le kit le contient</span></h2>
+    <h2 class="h2" id="benefices-table">Ce que vous cherchez, <span class="mk">le kit le contient</span></h2>
     <p class="sub">De la routine du soir au suivi du mois, voici où trouver chaque outil.</p>
     <div class="dsr">
       <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><b>Un programme simple à suivre</b><span>Routine en 5 étapes, plan sur 3 mois, 30 jours de jeux.</span></div>
@@ -433,119 +373,10 @@
   </div>
 </section>
 
-<section data-offer style="padding:30px 0">
-  <div class="wrap"><div class="rappel">
-    <div>
-      <h2>Vous pouvez commencer dès aujourd'hui, au tarif exceptionnel de <span data-prix style="white-space:nowrap">5 000 FCFA</span></h2>
-      <p>Chaque semaine d'école est une occasion d'installer de meilleures habitudes : autant la commencer avec les bons outils.</p>
-    </div>
-    <a class="btn" data-cta aria-describedby="info-paiement-kit" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout">Je profite du tarif spécial</a>
-  </div></div>
-</section>
-
-<section id="solution">
-  <div class="wrap">
-    <p class="tr">Vous savez ce que vous cherchez à construire. Voici la méthode qui y mène, une étape à la fois.</p>
-    <h2 class="h2">Et si les devoirs devenaient <span class="mk">un moment calme</span>, dès cette semaine ?</h2>
-    <p class="sub">Le Kit École &amp; Éveil vous donne une méthode simple, étape par étape. Pas besoin de tout savoir : il vous faut un cadre, des mots et une routine.</p>
-    <div class="two">
-      <div class="scene"><img src="assets/devoirs-en-famille-1e1d74b4ff.webp" width="1264" height="848" loading="lazy" decoding="async" style="width:100%;height:auto" alt="Dans un coin d’étude lumineux, une fille, crayon en main, sourit à son père devant son cahier ouvert."></div>
-      <div>
-        <h3 style="font-size:24px;margin-bottom:14px">Une routine en 5 étapes que votre enfant peut retenir</h3>
-        <p>En retrouvant les mêmes étapes, votre enfant peut commencer sans avoir à renégocier toute la séance.</p>
-      </div>
-    </div>
-    <div class="steps">
-      <div class="step"><span class="n" style="background:var(--teal)">1</span><div><b>Accueil et pause</b><small>10 à 20 min</small></div></div>
-      <div class="step"><span class="n" style="background:var(--orange)">2</span><div><b>Planifier</b><small>3 min</small></div></div>
-      <div class="step"><span class="n" style="background:var(--navy)">3</span><div><b>Travailler par blocs</b><small>10 à 15 min + pause</small></div></div>
-      <div class="step"><span class="n" style="background:var(--purple)">4</span><div><b>Vérifier ensemble</b><small>5 min</small></div></div>
-      <div class="step"><span class="n" style="background:var(--coral)">5</span><div><b>Ranger et féliciter</b><small>3 min</small></div></div>
-    </div>
-    <p class="why">Et pour le week-end : 30 jours de jeux qui entraînent l'attention, la mémoire, la parole, la logique et la créativité.</p>
-    <div class="cta-row"><a class="btn" data-cta aria-describedby="info-paiement-kit" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout">Commander le kit complet</a></div>
-  </div>
-</section>
-
-<section id="phrases">
-  <div class="wrap">
-    <h2 class="h2">Les mots qui calment, <span class="mk">prêts à l'emploi</span></h2>
-    <p class="sub">Quand la tension monte, on ne sait plus quoi dire. Le guide vous donne les phrases à la place. Un avant-goût :</p>
-    <div class="swap">
-      <div><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>« Dépêche-toi ! »</span><span class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>« On a 15 minutes. Par quoi veux-tu commencer ? »</span></div>
-      <div><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>« Tu es nul en maths. »</span><span class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>« Ce n'est pas encore facile. Montre-moi où ça bloque. »</span></div>
-      <div><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>« Arrête de pleurer ! »</span><span class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>« Je vois que tu es fâché. Respire avec moi, puis on reprend. »</span></div>
-      <div><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>« Tu me fais perdre mon temps. »</span><span class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>« Moi aussi je suis fatigué. On reprend dans 5 minutes. »</span></div>
-    </div>
-    <p class="more">…et 6 autres situations dans le guide, avec les plans B pour les 8 moments difficiles.</p>
-  </div>
-</section>
-
-<section class="alt" id="scene">
-  <div class="wrap">
-    <h2 class="h2">Voyez la même scène, <span class="mk">avec les bons mots</span></h2>
-    <p class="sub">Une scène que beaucoup de parents connaissent : « L'enfant refuse ». Voici comment le guide la désamorce, en 6 gestes.</p>
-    <ol class="scn">
-      <li><span class="who e">Enfant</span><span>Il repousse son cahier : « Je suis fatigué, je ne veux pas travailler ! »</span></li>
-      <li><span class="who p">Parent</span><span>Il respire et reconnaît l'émotion : « Je vois que ta journée a été longue. »</span></li>
-      <li><span class="who p">Parent</span><span>Il propose un choix court : « Tu préfères commencer par 5 minutes de lecture ou de calcul ? »</span></li>
-      <li><span class="who e">Enfant</span><span>Il choisit la lecture.</span></li>
-      <li><span class="who p">Parent</span><span>Il lance le minuteur sur 5 minutes et s'assoit calmement à côté.</span></li>
-      <li><span class="who p">Parent</span><span>Il félicite le démarrage : « Bravo, tu t'es mis au travail dans le calme ! »</span></li>
-    </ol>
-    <p class="why">Pas de cris, pas de menace, pas de bataille. Ce geste est un des 8 plans B du guide.</p>
-  </div>
-</section>
-
-<section id="escalier">
-  <div class="wrap">
-    <h2 class="h2">Du soir tendu au soir calme : <span class="mk">4 marches</span> claires</h2>
-    <p class="sub">Quatre repères pour passer d’une intention à un premier essai, à votre rythme.</p>
-    <div class="stair">
-      <div class="mar m4"><span class="mn">1</span><div><h3>Un premier pas dès ce soir</h3><p>Dès ce soir : 10 minutes pour démarrer, puis 10 à 20 minutes par jour. Des phrases et des plans B prêts : vous n'improvisez plus et vous gagnez du temps.</p></div></div>
-      <div class="mar m3"><span class="mn">2</span><div><h3>Vous en êtes capable</h3><p>Même si vous avez peu étudié : on vous demande d'écouter, de poser des questions et de féliciter l'effort, pas de tout savoir.</p></div></div>
-      <div class="mar m2"><span class="mn">3</span><div><h3>De l’aide en cas de doute</h3><p>Garantie de <span data-garantie>7</span> jours, et un contact WhatsApp pour vos questions.</p></div></div>
-      <div class="mar m1"><span class="mn">4</span><div><h3>Un cadre pour la suite</h3><p>Un cadre, 4 règles, une routine en 5 étapes, 30 jours de jeux : vous savez toujours quoi faire ensuite.</p></div></div>
-    </div>
-    <div class="cert">
-      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><b>Le résultat est concret</b><span>Vous savez exactement ce que vous recevez, page par page.</span></div>
-      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><b>Le chemin a du sens</b><span>Une étape à la fois, sur 3 mois, à votre rythme.</span></div>
-      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><b>Vous pouvez le faire</b><span>Avec peu de temps, peu de moyens, peu d'études.</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="alt" id="trente-jours">
-  <div class="wrap">
-    <h2 class="h2">30 jours de jeux pour <span class="mk">apprendre, réfléchir et progresser</span></h2>
-    <p class="sub">10 à 20 minutes par jour, en famille, sans note ni punition. Rien à acheter : papier, crayon, bouchons, un pagne, un minuteur.</p>
-    <div class="caps">
-      <div class="cap"><div class="ic" style="background:#1E7F7A"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9.5a5 5 0 0110 0c0 3.2-3 3.6-3 6.5a2.6 2.6 0 01-5.2 0"/><path d="M10 9.5a2 2 0 014 0"/></svg></div><b>Attention</b><small>rester concentré</small></div>
-      <div class="cap"><div class="ic" style="background:#F28C28"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/></svg></div><b>Observation</b><small>remarquer les détails</small></div>
-      <div class="cap"><div class="ic" style="background:#E0A800"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="7" width="11" height="13" rx="2"/><path d="M8.5 4h9a2 2 0 012 2v10"/></svg></div><b>Mémoire</b><small>retenir et retrouver</small></div>
-      <div class="cap"><div class="ic" style="background:#243B53"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9.5L4 20.5z"/></svg></div><b>Parole</b><small>s'exprimer clairement</small></div>
-      <div class="cap"><div class="ic" style="background:#4CAF7A"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 4.5a2 2 0 114 0V6.5h4v4h-2a2 2 0 100 4h2v4h-4v-2a2 2 0 10-4 0v2H6v-4h2a2 2 0 100-4H6v-4h4z"/></svg></div><b>Logique</b><small>chercher la règle</small></div>
-      <div class="cap"><div class="ic" style="background:#F4978E"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20l1-5L16 4l4 4L9 19z"/><path d="M14 6l4 4"/></svg></div><b>Créativité</b><small>imaginer du nouveau</small></div>
-    </div>
-    <div class="weeks">
-      <div class="wk">Semaine 1<small>Attention et observation</small></div>
-      <div class="wk">Semaine 2<small>Mémoire</small></div>
-      <div class="wk">Semaine 3<small>Parole et vocabulaire</small></div>
-      <div class="wk">Semaine 4<small>Logique et créativité</small></div>
-      <div class="wk">Jours 29 et 30<small>Bilan de champion et grand défi en famille</small></div>
-    </div>
-  </div>
-</section>
-
 <section class="alt" id="contenu">
   <div class="wrap">
     <h2 class="h2">Découvrez tout ce que vous obtenez avec le <span class="mk">Kit École &amp; Éveil</span></h2>
     <p class="sub">Le premier guide organise les devoirs, le deuxième propose les jeux et le carnet garde une trace des efforts.</p>
-    <div class="flow">
-      <div><i>1</i><b>Comprendre et installer</b><span>Les Devoirs sans bataille : la routine, les mots, les plans B</span></div>
-      <div><i>2</i><b>Pratiquer</b><span>Les Petits Génies à la Maison : 30 jours de jeux en famille</span></div>
-      <div><i>3</i><b>Suivre</b><span>Mon Carnet École &amp; Éveil<span data-bonus-carnet> (<span class="kit-bonus-jaune">bonus</span> de lancement)</span> : plannings, étoiles, bilans</span></div>
-    </div>
     <div class="docs">
       <div class="doc doc-parents">
         <img class="doc-parents-visuel" src="assets/devoirs-sans-bataille-3309f96e54.webp" width="1264" height="1264" loading="lazy" decoding="async" alt="Maquette 3D du livre « Les Devoirs sans bataille », présenté debout sur deux exemplaires à plat.">
@@ -634,6 +465,86 @@
   </div>
 </section>
 
+<section data-offer style="padding:30px 0">
+  <div class="wrap"><div class="rappel">
+    <div>
+      <h2>Vous pouvez commencer dès aujourd'hui, au tarif exceptionnel de <span data-prix style="white-space:nowrap">5 000 FCFA</span></h2>
+      <p>Chaque semaine d'école est une occasion d'installer de meilleures habitudes : autant la commencer avec les bons outils.</p>
+    </div>
+    <a class="btn" data-cta aria-describedby="info-paiement-kit" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout">Je profite du tarif spécial</a>
+  </div></div>
+</section>
+
+<section id="solution">
+  <div class="wrap">
+    <p class="tr">Vous savez ce que vous cherchez à construire. Voici la méthode qui y mène, une étape à la fois.</p>
+    <h2 class="h2">Et si les devoirs devenaient <span class="mk">un moment calme</span>, dès cette semaine ?</h2>
+    <p class="sub">Le Kit École &amp; Éveil vous donne une méthode simple, étape par étape. Pas besoin de tout savoir : il vous faut un cadre, des mots et une routine.</p>
+    <div class="two">
+      <div class="scene"><img src="assets/devoirs-en-famille-1e1d74b4ff.webp" width="1264" height="848" loading="lazy" decoding="async" style="width:100%;height:auto" alt="Dans un coin d’étude lumineux, une fille, crayon en main, sourit à son père devant son cahier ouvert."></div>
+      <div>
+        <h3 style="font-size:24px;margin-bottom:14px">Une routine en 5 étapes que votre enfant peut retenir</h3>
+        <p>En retrouvant les mêmes étapes, votre enfant peut commencer sans avoir à renégocier toute la séance.</p>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n" style="background:var(--teal)">1</span><div><b>Accueil et pause</b><small>10 à 20 min</small></div></div>
+      <div class="step"><span class="n" style="background:var(--orange)">2</span><div><b>Planifier</b><small>3 min</small></div></div>
+      <div class="step"><span class="n" style="background:var(--navy)">3</span><div><b>Travailler par blocs</b><small>10 à 15 min + pause</small></div></div>
+      <div class="step"><span class="n" style="background:var(--purple)">4</span><div><b>Vérifier ensemble</b><small>5 min</small></div></div>
+      <div class="step"><span class="n" style="background:var(--coral)">5</span><div><b>Ranger et féliciter</b><small>3 min</small></div></div>
+    </div>
+    <p class="why">Et pour le week-end : 30 jours de jeux qui entraînent l'attention, la mémoire, la parole, la logique et la créativité.</p>
+    <div class="cta-row"><a class="btn" data-cta aria-describedby="info-paiement-kit" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout">Commander le kit complet</a></div>
+  </div>
+</section>
+
+<section id="phrases">
+  <div class="wrap">
+    <h2 class="h2">Les mots qui calment, <span class="mk">prêts à l'emploi</span></h2>
+    <p class="sub">Quand la tension monte, on ne sait plus quoi dire. Le guide vous donne les phrases à la place. Un avant-goût :</p>
+    <div class="swap">
+      <div><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>« Dépêche-toi ! »</span><span class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>« On a 15 minutes. Par quoi veux-tu commencer ? »</span></div>
+      <div><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>« Tu es nul en maths. »</span><span class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>« Ce n'est pas encore facile. Montre-moi où ça bloque. »</span></div>
+      <div><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>« Arrête de pleurer ! »</span><span class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>« Je vois que tu es fâché. Respire avec moi, puis on reprend. »</span></div>
+      <div><span class="no"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>« Tu me fais perdre mon temps. »</span><span class="yes"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>« Moi aussi je suis fatigué. On reprend dans 5 minutes. »</span></div>
+    </div>
+    <p class="more">…et 6 autres situations dans le guide, avec les plans B pour les 8 moments difficiles.</p>
+  </div>
+</section>
+
+<section id="escalier">
+  <div class="wrap">
+    <h2 class="h2" id="scene">Du soir tendu au soir calme : <span class="mk">4 marches</span> claires</h2>
+    <p class="sub">Quatre repères pour passer d’une intention à un premier essai, à votre rythme.</p>
+    <div class="stair">
+      <div class="mar m4"><span class="mn">1</span><div><h3>Un premier pas dès ce soir</h3><p>Dès ce soir : 10 minutes pour démarrer, puis 10 à 20 minutes par jour. Des phrases et des plans B prêts : vous n'improvisez plus et vous gagnez du temps.</p></div></div>
+      <div class="mar m3"><span class="mn">2</span><div><h3>Vous en êtes capable</h3><p>Même si vous avez peu étudié : on vous demande d'écouter, de poser des questions et de féliciter l'effort, pas de tout savoir.</p></div></div>
+      <div class="mar m2"><span class="mn">3</span><div><h3>De l’aide en cas de doute</h3><p>Garantie de <span data-garantie>7</span> jours, et un contact WhatsApp pour vos questions.</p></div></div>
+      <div class="mar m1"><span class="mn">4</span><div><h3>Un cadre pour la suite</h3><p>Un cadre, 4 règles, une routine en 5 étapes, 30 jours de jeux : vous savez toujours quoi faire ensuite.</p></div></div>
+    </div>
+    <div class="cert">
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><b>Le chemin a du sens</b><span>Une étape à la fois, sur 3 mois, à votre rythme.</span></div>
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><b>Vous pouvez le faire</b><span>Avec peu de temps, peu de moyens, peu d'études.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="trente-jours">
+  <div class="wrap">
+    <h2 class="h2">30 jours de jeux pour <span class="mk">apprendre, réfléchir et progresser</span></h2>
+    <p class="sub">10 à 20 minutes par jour, en famille, sans note ni punition. Rien à acheter : papier, crayon, bouchons, un pagne, un minuteur.</p>
+    <div class="caps">
+      <div class="cap"><div class="ic" style="background:#1E7F7A"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 9.5a5 5 0 0110 0c0 3.2-3 3.6-3 6.5a2.6 2.6 0 01-5.2 0"/><path d="M10 9.5a2 2 0 014 0"/></svg></div><b>Attention</b><small>rester concentré</small></div>
+      <div class="cap"><div class="ic" style="background:#F28C28"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/></svg></div><b>Observation</b><small>remarquer les détails</small></div>
+      <div class="cap"><div class="ic" style="background:#E0A800"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="7" width="11" height="13" rx="2"/><path d="M8.5 4h9a2 2 0 012 2v10"/></svg></div><b>Mémoire</b><small>retenir et retrouver</small></div>
+      <div class="cap"><div class="ic" style="background:#243B53"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16v11H9.5L4 20.5z"/></svg></div><b>Parole</b><small>s'exprimer clairement</small></div>
+      <div class="cap"><div class="ic" style="background:#4CAF7A"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 4.5a2 2 0 114 0V6.5h4v4h-2a2 2 0 100 4h2v4h-4v-2a2 2 0 10-4 0v2H6v-4h2a2 2 0 100-4H6v-4h4z"/></svg></div><b>Logique</b><small>chercher la règle</small></div>
+      <div class="cap"><div class="ic" style="background:#F4978E"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20l1-5L16 4l4 4L9 19z"/><path d="M14 6l4 4"/></svg></div><b>Créativité</b><small>imaginer du nouveau</small></div>
+    </div>
+  </div>
+</section>
+
 <section id="objections">
   <div class="wrap">
     <h2 class="h2">Ce que vous vous dites <span class="mk">peut-être</span></h2>
@@ -649,7 +560,7 @@
 
 <section id="preuves">
   <div class="wrap">
-    <h2 class="h2">Le kit en <span class="mk">conversation</span></h2>
+    <h2 class="h2">Ce que disent les <span class="mk">parents</span></h2>
     <div class="captures-fenetre" role="region" aria-label="Trois captures de conversation">
       <div class="captures-piste">
         <figure class="capture-carte">
@@ -663,7 +574,6 @@
         </figure>
       </div>
     </div>
-    <p class="captures-aide" id="captures-mode-emploi">Maintenez une image pour la lire. Relâchez pour reprendre le défilement.</p>
     <div class="cta-row"><a class="btn" data-cta aria-describedby="info-paiement-kit" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout">Commander les trois guides</a></div>
   </div>
 </section>
@@ -714,9 +624,8 @@
           <div class="save" data-promo>Vous économisez <span style="display:inline-block;max-width:100%"><span data-eco>20 000 FCFA</span> (−<span data-remise>80</span> %)</span></div>
           <div class="u">paiement unique · accès aux 3 guides</div>
         </div>
-        <p class="cond">Conditions : paiement unique, sans abonnement · accès aux 3 documents après paiement · garantie de <span data-garantie>7</span> jours.</p>
         <div id="rare" hidden></div>
-        <div id="cd" class="on" hidden role="timer" aria-label="Minuteur" aria-live="off" data-countdown-mode="visiteur" data-countdown-minutes="35" data-countdown-tz="+00:00"><div>35 minutes, sans incidence sur le prix</div><div class="cd-grid"><div><b data-cd="j">00</b>jours</div><div><b data-cd="h">00</b>heures</div><div><b data-cd="m">00</b>minutes</div><div><b data-cd="s">00</b>secondes</div></div></div>
+        <div id="cd" class="on" hidden role="timer" aria-label="Compte à rebours de l’offre" aria-live="off" data-countdown-mode="visiteur" data-countdown-minutes="35" data-countdown-tz="+00:00"><div>Votre tarif spécial est réservé encore pendant</div><div class="cd-grid"><div><b data-cd="j">00</b>jours</div><div><b data-cd="h">00</b>heures</div><div><b data-cd="m">00</b>minutes</div><div><b data-cd="s">00</b>secondes</div></div></div>
         <a class="btn pulse" data-cta aria-describedby="info-paiement-kit" data-off="Je commande mon kit à 5 000 FCFA" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout" style="width:100%;margin-top:10px">Commander sur Chariow · 5 000 FCFA</a>
         <div class="reassure" style="color:var(--muted);justify-content:center;margin-top:14px">
           <span><svg class="ico" style="color:var(--teal-d)" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5.5c0 4.5-3 7.8-7 9.5-4-1.7-7-5-7-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg> Garantie <span data-garantie>7</span> jours</span>
@@ -773,12 +682,12 @@
     <div class="choices">
       <div class="ch n1">
         <div class="num">1</div>
-        <p>Essayer d’abord un conseil de cette page : choisir avec votre enfant une heure et une place pour les devoirs.</p>
+        <p>Continuer à improviser chaque soir, avec la fatigue et la tension que vous connaissez déjà.</p>
       </div>
       <div class="ch n2">
         <div class="num">2</div>
-        <p>Vous appuyer sur le <b>Kit École &amp; Éveil</b> pour organiser les devoirs, varier les jeux et garder une trace des efforts.</p>
-        <p><b>Vous pouvez commencer par un seul outil, sans suivre tout le programme dès ce soir.</b></p>
+        <p>Décider maintenant de reprendre le contrôle de vos soirées avec le <b>Kit École &amp; Éveil</b>.</p>
+        <p><b>Le choix vous appartient, mais le changement commence par une décision.</b></p>
         <a class="btn pulse" data-cta aria-describedby="info-paiement-kit" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout">Choisir le kit · 5 000 FCFA</a>
       </div>
     </div>
@@ -810,11 +719,11 @@
 </footer>
 
 <div class="sticky" id="sticky" role="region" aria-label="Commande rapide du kit">
-  <div class="pp"><span data-prix>5 000 FCFA</span><s data-prix-normal data-promo>25 000 FCFA</s><small><span data-offer hidden><b class="cd-mini">--</b> · </span>garantie <span data-garantie>7</span> jours</small></div>
+  <div class="pp"><span data-prix>5 000 FCFA</span><s data-prix-normal data-promo>25 000 FCFA</s><small><span data-offer hidden>Minuteur de visite&nbsp;: <b class="cd-mini">--</b> · </span>garantie <span data-garantie>7</span> jours</small></div>
   <a class="btn" data-cta aria-describedby="info-paiement-kit" data-off="Commander" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout">Commander</a>
   <button type="button" class="kit-fermer-barre" aria-label="Masquer la barre de commande" title="Masquer la barre de commande">×</button>
 </div>
 
-<script defer src="assets/page-c5261828d4.js"></script>
+<script defer src="assets/page-ae32f026fc.js"></script>
 </body>
 </html>

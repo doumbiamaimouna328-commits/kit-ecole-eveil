@@ -31,12 +31,12 @@
       end=start+(parseInt(cd.dataset.countdownMinutes,10)||35)*60000;
     }else if(mode==='date'&&cd.dataset.countdownEnd){var iso=cd.dataset.countdownEnd.trim().replace(' ','T');if(/^\d{4}-\d{2}-\d{2}$/.test(iso))iso+='T23:59:59';if(!/(Z|[+-]\d{2}:?\d{2})$/i.test(iso))iso+=cd.dataset.countdownTz||'+00:00';end=Date.parse(iso);}
     if(!Number.isFinite(end))return;
-    var cells=Array.from(cd.querySelectorAll('[data-cd]')),top=document.querySelector('.urg-cd'),topText=document.querySelector('.cd-text'),mini=document.querySelector('.cd-mini'),job=0;
+    var cells=Array.from(cd.querySelectorAll('[data-cd]')),top=document.querySelector('.urg-cd'),topText=document.querySelector('.cd-text'),mini=document.querySelector('.cd-mini'),titre=cd.firstElementChild,libelle=titre.textContent,job=0;
     function set(el,s){if(el&&el.textContent!==s)el.textContent=s;}
     function pad(v){return String(v).padStart(2,'0');}
-    function tick(){clearTimeout(job);if(document.hidden)return;var t=Math.max(0,Math.ceil((end-Date.now())/1000));cd.hidden=!t;if(top)top.hidden=!t;if(mini&&mini.parentElement)mini.parentElement.hidden=!t;
-      if(!t){set(mini,'');return;}var v={j:Math.floor(t/86400),h:Math.floor(t/3600)%24,m:Math.floor(t/60)%60,s:t%60};cells.forEach(function(el){set(el,pad(v[el.dataset.cd]));});
-      var time=(v.j?v.j+' j ':'')+(v.h?pad(v.h)+' h ':'')+pad(v.m)+' min '+pad(v.s)+' s';set(topText,time);set(mini,time);job=setTimeout(tick,Math.max(120,(end-Date.now())%1000+20));}
+    function tick(){clearTimeout(job);if(document.hidden)return;var t=Math.max(0,Math.ceil((end-Date.now())/1000));cd.hidden=false;if(top)top.hidden=false;
+      set(titre,t?libelle:'Le compte à rebours est terminé.');var v={j:Math.floor(t/86400),h:Math.floor(t/3600)%24,m:Math.floor(t/60)%60,s:t%60};cells.forEach(function(el){set(el,pad(v[el.dataset.cd]));});
+      var time=(v.j?v.j+' j ':'')+(v.h?pad(v.h)+' h ':'')+pad(v.m)+' min '+pad(v.s)+' s';set(topText,time);set(mini,t?time:'');if(t)job=setTimeout(tick,Math.max(120,(end-Date.now())%1000+20));}
     document.addEventListener('visibilitychange',tick);window.addEventListener('pageshow',tick);window.addEventListener('pagehide',function(){clearTimeout(job);});tick();
   })();
 
@@ -83,8 +83,8 @@
     pas=cartes[0].getBoundingClientRect().width+gap;inset=Math.min(9,gap*.5);vitesse=fen.clientWidth<550?.022:.031;peindre();etat();
   }
   function changer(){stop();actif=!pref.matches;clavier=false;doigts.clear();pointeurs.clear();
-    if(actif){fen.setAttribute('data-defile','');fen.tabIndex=0;fen.setAttribute('aria-describedby','captures-mode-emploi');mesurer();}
-    else{fen.removeAttribute('data-defile');fen.removeAttribute('tabindex');fen.removeAttribute('aria-describedby');phase=0;cartes.forEach(function(c){c.style.removeProperty('transform');});}
+    if(actif){fen.setAttribute('data-defile','');fen.tabIndex=0;fen.setAttribute('aria-description','Défilement en pause pendant l’appui ou au focus clavier. Utilisez les flèches pour changer de capture.');mesurer();}
+    else{fen.removeAttribute('data-defile');fen.removeAttribute('tabindex');fen.removeAttribute('aria-description');phase=0;cartes.forEach(function(c){c.style.removeProperty('transform');});}
   }
   function relacher(){doigts.clear();pointeurs.clear();etat();}
   function presser(e){if(!actif || (e.button!=null && e.button!==0))return;pointage=true;clavier=false;pointeurs.add(e.pointerId);etat();
@@ -129,7 +129,8 @@
   rail.className = 'kit-infos-rail';
   commande.type = 'button'; commande.className = 'kit-infos-commande'; commande.hidden = true;
   ligne.id = ligne.id || 'kit-infos-accueil'; commande.setAttribute('aria-controls', ligne.id);
-  ligne.parentNode.insertBefore(rail, ligne); rail.appendChild(ligne); rail.appendChild(commande);
+  ligne.parentNode.insertBefore(rail, ligne); rail.appendChild(ligne);
+  var compact=matchMedia('(max-width: 899px)'), description=ligne.getAttribute('aria-description')||'';
   var pref = window.matchMedia('(prefers-reduced-motion: reduce)');
   var lecture = !pref.matches, deborde = false, visible = false, toucher = false, clavier = false;
   var frame = 0, delai = 0, dernier = 0, position = 0, sens = 1, limite = 0;
@@ -141,6 +142,10 @@
     var action = lecture ? 'Mettre le défilement des informations en pause' : 'Lancer le défilement automatique des informations';
     commande.setAttribute('aria-label', action); commande.title = action;
     commande.dataset.lecture = lecture ? 'oui' : 'non';
+    if(compact.matches && deborde){
+      ligne.setAttribute('aria-keyshortcuts','Space Enter ArrowLeft ArrowRight Home End');
+      ligne.setAttribute('aria-description',description+' Touchez la ligne ou appuyez sur Espace pour '+(lecture?'mettre en pause.':'reprendre le défilement.'));
+    }else{ligne.removeAttribute('aria-keyshortcuts');ligne.setAttribute('aria-description',description);}
   }
   function programmer(pause) {
     arreter();
@@ -164,16 +169,20 @@
     else frame = requestAnimationFrame(avancer);
   }
   function mesurer() {
-    // Mesurer contre la largeur complète : le bouton ne doit pas provoquer lui-même un débordement.
+    // Sur petit écran la ligne dispose de toute la largeur, sans bouton ni place réservée.
+    if(compact.matches){if(commande.parentNode)commande.remove();}
+    else if(!commande.parentNode)rail.appendChild(commande);
     var requis = ligne.scrollWidth > rail.clientWidth + 1, change = requis !== deborde;
-    deborde = requis; commande.hidden = !requis;
+    deborde = requis; commande.hidden = compact.matches || !requis; libelle();
     var max = Math.max(0, ligne.scrollWidth - ligne.clientWidth);
     if (!requis) { arreter(); ligne.scrollLeft = 0; sens = 1; limite = 0; return; }
     if (change || limite !== max) { limite = max; programmer(850); }
   }
   function disponibilite(v) { if (visible !== v) { visible = v; programmer(850); } }
   function testerVisibilite() { var r = rail.getBoundingClientRect(); disponibilite(r.bottom > 0 && r.top < innerHeight); }
-  commande.addEventListener('click', function () { lecture = !lecture; libelle(); programmer(140); });
+  function basculer(){lecture=!lecture;clavier=false;libelle();programmer(140);}
+  commande.addEventListener('click',basculer);
+  ligne.addEventListener('click',function(){if(compact.matches && deborde)basculer();});
   // Une manipulation manuelle ne lutte jamais contre l’animation.
   function appui() { toucher = true; arreter(); }
   function relache() { if (toucher) { toucher = false; programmer(1500); } }
@@ -190,6 +199,7 @@
     if (clavier) arreter();
   });
   ligne.addEventListener('keydown', function (e) {
+    if(compact.matches && deborde && (e.key===' ' || e.key==='Enter')){e.preventDefault();if(!e.repeat)basculer();return;}
     if (/^(ArrowLeft|ArrowRight|Home|End)$/.test(e.key)) { clavier = true; arreter(); }
   });
   ligne.addEventListener('blur', function () { clavier = false; programmer(800); });
