@@ -26,6 +26,34 @@
   height: 0 !important;
   clip: rect(0, 0, 0, 0) !important;
 }
+/* Affichage du minuteur sur mobile et desktop sans masquage */
+#urgence .urg-in {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  gap: 4px 10px !important;
+}
+#urgence .urg-cd {
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  font-weight: 700 !important;
+}
+#urgence .urg-cd[hidden] {
+  display: none !important;
+}
+@media (max-width: 699px) {
+  #urgence .urg-cd {
+    display: inline-flex !important;
+  }
+}
+@media (max-width: 375px) {
+  #urgence .urg-cd {
+    display: inline-flex !important;
+  }
+}
 </style>
 <script>
 (function() {
@@ -53,7 +81,7 @@
 <div id="nl-hud-frame" style="display:none!important"></div>
 <a class="kit-saut" href="#contenu-principal">Aller au contenu principal</a>
 
-<div id="urgence" class="on" role="region" aria-label="Offre du kit"><div class="urg-in"><span class="urg-b" data-promo>−<span data-remise>80</span> %</span><span><b>Offre spéciale</b> : le kit complet à <b data-prix>5 000 FCFA</b> <s data-prix-normal data-promo>25 000 FCFA</s></span><span class="urg-cd" hidden>Visite&nbsp;: <b class="cd-text">--</b></span></div></div>
+<div id="urgence" class="on" role="region" aria-label="Offre du kit"><div class="urg-in"><span class="urg-b" data-promo>−<span data-remise>80</span> %</span><span><b>Offre spéciale</b> : le kit complet à <b data-prix>5 000 FCFA</b> <s data-prix-normal data-promo>25 000 FCFA</s></span><span class="urg-cd" hidden><b class="cd-text">--</b></span></div></div>
 
 <main id="contenu-principal" tabindex="-1">
 
@@ -688,7 +716,7 @@
         </div>
         <p class="cond">Conditions : paiement unique, sans abonnement · accès aux 3 documents après paiement · garantie de <span data-garantie>7</span> jours.</p>
         <div id="rare" hidden></div>
-        <div id="cd" class="on" hidden role="timer" aria-label="Minuteur de visite" aria-live="off" data-countdown-mode="visiteur" data-countdown-minutes="35" data-countdown-tz="+00:00"><div>Minuteur de visite · 35 minutes, sans incidence sur le prix</div><div class="cd-grid"><div><b data-cd="j">00</b>jours</div><div><b data-cd="h">00</b>heures</div><div><b data-cd="m">00</b>minutes</div><div><b data-cd="s">00</b>secondes</div></div></div>
+        <div id="cd" class="on" hidden role="timer" aria-label="Minuteur" aria-live="off" data-countdown-mode="visiteur" data-countdown-minutes="35" data-countdown-tz="+00:00"><div>35 minutes, sans incidence sur le prix</div><div class="cd-grid"><div><b data-cd="j">00</b>jours</div><div><b data-cd="h">00</b>heures</div><div><b data-cd="m">00</b>minutes</div><div><b data-cd="s">00</b>secondes</div></div></div>
         <a class="btn pulse" data-cta aria-describedby="info-paiement-kit" data-off="Je commande mon kit à 5 000 FCFA" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout" style="width:100%;margin-top:10px">Commander sur Chariow · 5 000 FCFA</a>
         <div class="reassure" style="color:var(--muted);justify-content:center;margin-top:14px">
           <span><svg class="ico" style="color:var(--teal-d)" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l7 3v5.5c0 4.5-3 7.8-7 9.5-4-1.7-7-5-7-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg> Garantie <span data-garantie>7</span> jours</span>
@@ -782,7 +810,7 @@
 </footer>
 
 <div class="sticky" id="sticky" role="region" aria-label="Commande rapide du kit">
-  <div class="pp"><span data-prix>5 000 FCFA</span><s data-prix-normal data-promo>25 000 FCFA</s><small><span data-offer hidden>Minuteur de visite&nbsp;: <b class="cd-mini">--</b> · </span>garantie <span data-garantie>7</span> jours</small></div>
+  <div class="pp"><span data-prix>5 000 FCFA</span><s data-prix-normal data-promo>25 000 FCFA</s><small><span data-offer hidden><b class="cd-mini">--</b> · </span>garantie <span data-garantie>7</span> jours</small></div>
   <a class="btn" data-cta aria-describedby="info-paiement-kit" data-off="Commander" href="https://digimarket1.mychariow.shop/kit-ecole-eveil/checkout">Commander</a>
   <button type="button" class="kit-fermer-barre" aria-label="Masquer la barre de commande" title="Masquer la barre de commande">×</button>
 </div>
