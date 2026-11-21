@@ -16,8 +16,41 @@
 <link rel="preload" as="image" type="image/webp" media="(max-width: 900px)" imagesrcset="assets/banniere-486-6d73ca6d45.webp 486w, assets/banniere-810-bf3fb27ba8.webp 810w, assets/banniere-1134-7739b0337d.webp 1134w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" as="image" media="(min-width: 901px)" href="assets/banniere-kit-722e0686dc.jpg" fetchpriority="high">
 <link rel="stylesheet" href="assets/page-a27057fab0.css">
+<style>
+#nl-badge-frame, #nl-hud-frame, iframe[title*="Netlify"], iframe[title*="powered by netlify" i] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+</style>
+<script>
+(function() {
+  function blockNetlifyBadge() {
+    if (!document.getElementById('nl-badge-frame')) {
+      var b = document.createElement('div');
+      b.id = 'nl-badge-frame';
+      b.style.display = 'none';
+      (document.body || document.documentElement).appendChild(b);
+    }
+    if (!document.getElementById('nl-hud-frame')) {
+      var h = document.createElement('div');
+      h.id = 'nl-hud-frame';
+      h.style.display = 'none';
+      (document.body || document.documentElement).appendChild(h);
+    }
+  }
+  blockNetlifyBadge();
+  document.addEventListener('DOMContentLoaded', blockNetlifyBadge);
+})();
+</script>
 </head>
 <body>
+<div id="nl-badge-frame" style="display:none!important"></div>
+<div id="nl-hud-frame" style="display:none!important"></div>
 <a class="kit-saut" href="#contenu-principal">Aller au contenu principal</a>
 
 <div id="urgence" class="on" role="region" aria-label="Offre du kit"><div class="urg-in"><span class="urg-b" data-promo>−<span data-remise>80</span> %</span><span><b>Offre spéciale</b> : le kit complet à <b data-prix>5 000 FCFA</b> <s data-prix-normal data-promo>25 000 FCFA</s></span><span class="urg-cd" hidden>Visite&nbsp;: <b class="cd-text">--</b></span></div></div>
